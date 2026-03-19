@@ -1,5 +1,5 @@
 async function pagar(items) {
-  const respuesta = await fetch('http://localhost:3001/crear-sesion-pago', {
+  const respuesta = await fetch(`${process.env.REACT_APP_SERVER_URL}/crear-sesion-pago`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ laminas: items })
