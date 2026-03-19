@@ -59,17 +59,14 @@ console.log('Vista actual:', vista)
           </button>
         </div>
 
-        <div className="flex gap-8">
-          <div className="flex-1">
-            <Galeria onAñadir={añadirAlCarrito} />
-          </div>
-          <div className="w-80">
-            <Carrito
-              items={carrito}
-              onQuitar={quitarDelCarrito}
-            />
-          </div>
-        </div>
+       <div className="flex flex-col lg:flex-row gap-8">
+  <div className="flex-1">
+    <Galeria onAñadir={añadirAlCarrito} />
+  </div>
+  <div className="w-full lg:w-80">
+    <Carrito items={carrito} onQuitar={quitarDelCarrito} />
+  </div>
+</div>
 
       </div>
     </div>
